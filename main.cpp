@@ -16,7 +16,7 @@ void writeVectorToFile(const std::vector<mpz_class>& vec, const std::string& fil
     FILE* outFile = fopen(filename.c_str(), "wb");
     if (!outFile) {
         std::cerr << "Error opening file for writing." << std::endl;
-        return;
+      //  return;
     }
 
     for (const auto& num : vec) {
@@ -31,7 +31,7 @@ std::vector<mpz_class> readVectorFromFile(const std::string& filename) {
     FILE* inFile = fopen(filename.c_str(), "rb");
     if (!inFile) {
         std::cerr << "Error opening file for reading." << std::endl;
-        return vec;
+      //  return vec;
     }
 
     while (!feof(inFile)) {
